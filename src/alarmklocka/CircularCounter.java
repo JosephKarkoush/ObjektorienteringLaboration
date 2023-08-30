@@ -54,7 +54,7 @@ public abstract class CircularCounter implements CounterType {
 	//Kolla om räknaren har räknat ett helt varv
 	if (currentCount >= MAX_NR_OF_COUNTS)
 	{
-	??? //Se till att räknaren börjar om från noll
+	reset(); //Se till att räknaren börjar om från noll
 	//Om kopplad till en annan räknare (nextCounter)...
 	if (nextCounter != null)
 	??? //...räkna upp den andra räknaren ett steg.
@@ -62,7 +62,9 @@ public abstract class CircularCounter implements CounterType {
 	}
 	else if (direction == Direction.DECREASING)
 	{
-	??? //Flera kod-rader saknas här
+	if(currentCount > 0) {
+		currentCount--;//Flera kod-rader saknas här
+	}
 	}
 	}
 	}
@@ -70,7 +72,7 @@ public abstract class CircularCounter implements CounterType {
 	@Override
 	public String toString()
 	{
-	????
+	return "" + currentCount;
 	}
 
 }
