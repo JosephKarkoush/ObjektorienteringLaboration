@@ -56,8 +56,8 @@ public abstract class CircularCounter implements CounterType {
 	{
 	reset(); //Se till att räknaren börjar om från noll
 	//Om kopplad till en annan räknare (nextCounter)...
-	if (nextCounter != null)
-	??? //...räkna upp den andra räknaren ett steg.
+	//if (nextCounter != null)
+	//??? //...räkna upp den andra räknaren ett steg.
 	}
 	}
 	else if (direction == Direction.DECREASING)
