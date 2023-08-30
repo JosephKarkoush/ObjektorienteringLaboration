@@ -31,14 +31,17 @@ public abstract class CircularCounter implements CounterType {
 
 	// Starta om räknare från början
 	@Override
-	public void reset() { ????; }
+	public void reset() {
+		currentCount = 0;
+	}
 
-	@Override
-	public void pause() { ????; }
+	public void pause() {
+		isPaused = true;
+	}
 
-	// Används för att häva paus
-	@Override
-	public void resume(){ ????; }
+	public void resume(){ 
+		isPaused = false;
+	}
 
 	@Override
 	public void count()
