@@ -2,7 +2,7 @@ package alarmklocka;
 
 public abstract class CircularCounter implements CounterType {
 
-	private enum Direction {
+	public enum Direction {
 		INCREASING, DECREASING
 	};
 
@@ -26,8 +26,8 @@ public abstract class CircularCounter implements CounterType {
 			currentCount = MAX_NR_OF_COUNTS - 1;
 	}
 
-	@Override
-	public int getCount() { return ????; }
+	
+	public int getCount() { return currentCount; }
 
 	// Starta om räknare från början
 	@Override
