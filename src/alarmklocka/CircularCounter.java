@@ -55,9 +55,9 @@ public abstract class CircularCounter implements CounterType {
 				// Kolla om räknaren har räknat ett helt varv
 				if (currentCount >= MAX_NR_OF_COUNTS) {
 					if (nextCounter != null) {
-						reset();
 						nextCounter.count();
 					}
+					reset();
 					// Se till att räknaren börjar om från noll
 					// Om kopplad till en annan räknare (nextCounter)...
 					// if (nextCounter != null)
