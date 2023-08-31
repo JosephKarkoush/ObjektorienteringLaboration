@@ -66,6 +66,9 @@ public abstract class CircularCounter implements CounterType {
 			} else if (direction == Direction.DECREASING) {
 				if (currentCount > 0) {
 					currentCount--;// Flera kod-rader saknas här
+				} else {
+					currentCount = MAX_NR_OF_COUNTS - 1;
+
 				}
 			}
 		}
