@@ -10,10 +10,29 @@ class MinuteTest {
 	void test() {
 		MinuteCounter minuteC = new MinuteCounter();
 		
-		for(int i = 0; i < 62; i++) {
+		for(int k = 0; k < 63; k++) {
 			minuteC.count();
 			System.out.println(minuteC.getCount());
 		}
+		
+		for(int i = 0; i < 5; i++) {
+			minuteC.count();
+			minuteC.count();
+
+			System.out.println(minuteC.getCount());
+			minuteC.pause();
+			
+		}
+		
+		for(int j = 0; j < 5; j++) {
+			minuteC.resume();
+			minuteC.count();
+			System.out.println(minuteC.getCount());
+			
+		}
+		minuteC.reset();
+		System.out.println(minuteC.getCount());
+		
 	}
 
 }

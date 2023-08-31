@@ -12,10 +12,28 @@ class SecondTest {
 	void test() {
 		SecondCounter secondC = new SecondCounter();
 		
-		for(int i = 0; i < 62; i++) {
+		for(int k = 0; k < 63; k++) {
 			secondC.count();
 			System.out.println(secondC.getCount());
 		}
+		
+		for(int i = 0; i < 5; i++) {
+			secondC.count();
+			secondC.count();
+
+			System.out.println(secondC.getCount());
+			secondC.pause();
+			
+		}
+		
+		for(int j = 0; j < 5; j++) {
+			secondC.resume();
+			secondC.count();
+			System.out.println(secondC.getCount());
+			
+		}
+		secondC.reset();
+		System.out.println(secondC.getCount());
 	}
 
 }

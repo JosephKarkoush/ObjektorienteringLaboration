@@ -14,13 +14,13 @@ class ConnectionTest {
 		MinuteCounter myCounter = new MinuteCounter(Direction.INCREASING, hourC);
 		SecondCounter secondC = new SecondCounter(Direction.INCREASING, myCounter);
 		
-		for(int i = 0; i < 25; i++ ) {
-			hourC.count();
-			System.out.println(hourC.getCount());
-			//System.out.println(myCounter.getCount());
+		for(int i = 0; i < 3700; i++ ) {
+			secondC.count();
+		
+			
 		}
 
-		 //System.out.println("It has passed: " + hourC.getCount() + ":" + myCounter.getCount() + ":" + secondC.getCount());
+		 System.out.println("It has passed: " + hourC.getCount() + ":" + myCounter.getCount() + ":" + secondC.getCount());
 	}
 	
 	
