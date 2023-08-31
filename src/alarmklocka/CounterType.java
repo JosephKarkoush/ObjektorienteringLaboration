@@ -7,5 +7,13 @@ public interface CounterType {
 	void reset();
 	
 	int getCount();
+	
+	void pause();
+	
+	void resume();
+	
+	String toString();
+	
+	
 
 }

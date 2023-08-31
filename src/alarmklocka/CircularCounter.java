@@ -34,11 +34,11 @@ public abstract class CircularCounter implements CounterType {
 	public void reset() {
 		currentCount = 0;
 	}
-
+	@Override
 	public void pause() {
 		isPaused = true;
 	}
-
+	@Override
 	public void resume(){ 
 		isPaused = false;
 	}
