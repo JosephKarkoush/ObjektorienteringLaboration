@@ -8,7 +8,12 @@ class MinuteTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		MinuteCounter minuteC = new MinuteCounter();
+		
+		for(int i = 0; i < 62; i++) {
+			minuteC.count();
+			System.out.println(minuteC.getCount());
+		}
 	}
 
 }

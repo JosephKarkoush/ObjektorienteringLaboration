@@ -8,7 +8,12 @@ class HourTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		HourCounter hourC = new HourCounter();
+		
+		for(int i = 0; i < 25; i++) {
+			hourC.count();
+			System.out.println(hourC.getCount());
+		}
 	}
 
 }
