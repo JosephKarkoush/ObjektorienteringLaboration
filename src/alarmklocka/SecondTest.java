@@ -34,6 +34,14 @@ class SecondTest {
 		}
 		secondC.reset();
 		System.out.println(secondC.getCount());
+		
+		SecondCounter secondCDec = new SecondCounter(Direction.DECREASING);
+		
+		for(int p = 0; p<65;p++) {
+			secondCDec.count();
+			System.out.println(secondCDec.getCount());
+		}
+
 	}
 
 }

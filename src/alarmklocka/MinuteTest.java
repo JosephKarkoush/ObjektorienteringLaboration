@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import alarmklocka.CircularCounter.Direction;
+
 class MinuteTest {
 
 	@Test
@@ -33,6 +35,13 @@ class MinuteTest {
 		minuteC.reset();
 		System.out.println(minuteC.getCount());
 		
+		
+		MinuteCounter minuteCDec = new MinuteCounter(Direction.DECREASING);
+		
+		for(int p = 0; p<65;p++) {
+			minuteCDec.count();
+			System.out.println(minuteCDec.getCount());
+		}
 	}
 
 }
