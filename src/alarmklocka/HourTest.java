@@ -38,10 +38,12 @@ class HourTest {
 		
 		HourCounter hourCDec = new HourCounter(Direction.DECREASING);
 		
-		for(int p = 0; p<26;p++) {
+		for(int p = 0; p<24;p++) {
 			hourCDec.count();
 			System.out.println(hourCDec.getCount());
 		}
+		
+		assertEquals(23,hourC.getCount());
 	}
 
 }
