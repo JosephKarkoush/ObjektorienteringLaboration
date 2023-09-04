@@ -10,17 +10,17 @@ class ConnectionTest {
 
 	@Test
 	void test() {
-		HourCounter hourC = new HourCounter();
-		MinuteCounter myCounter = new MinuteCounter(Direction.INCREASING, hourC);
-		SecondCounter secondC = new SecondCounter(Direction.INCREASING, myCounter);
+		HourCounter hourC = new HourCounter(Direction.DECREASING);
+		MinuteCounter minCounter = new MinuteCounter(Direction.DECREASING, hourC);
+		SecondCounter secondC = new SecondCounter(Direction.DECREASING, minCounter);
 		
-		for(int i = 0; i < 3700; i++ ) {
+		for(int i = 0; i < 86300; i++ ) {
 			secondC.count();
 		
 			
 		}
 
-		 System.out.println("It has passed: " + hourC.getCount() + ":" + myCounter.getCount() + ":" + secondC.getCount());
+		 System.out.println("It has passed: " + hourC.getCount() + ":" + minCounter.getCount() + ":" + secondC.getCount());
 	}
 	
 	

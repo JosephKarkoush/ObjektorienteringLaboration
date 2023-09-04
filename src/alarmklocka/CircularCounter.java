@@ -52,20 +52,21 @@ public abstract class CircularCounter implements CounterType {
 		if (!isPaused && this.MAX_NR_OF_COUNTS > 0) {
 			if (direction == Direction.INCREASING) {
 				currentCount++;
-				// Kolla om räknaren har räknat ett helt varv
 				if (currentCount >= MAX_NR_OF_COUNTS) {
 					if (nextCounter != null) {
 						nextCounter.count();
 					}
 					reset();
-					// Se till att räknaren börjar om från noll
-					// Om kopplad till en annan räknare (nextCounter)...
-					// if (nextCounter != null)
-					// ??? //...räkna upp den andra räknaren ett steg.
 				}
 			} else if (direction == Direction.DECREASING) {
 				if (currentCount > 0) {
-					currentCount--;// Flera kod-rader saknas här
+					currentCount--;
+					if (currentCount <= 0) {
+						if (nextCounter != null) {
+							nextCounter.count();
+						}
+						reset();
+					}
 				} else {
 					currentCount = MAX_NR_OF_COUNTS - 1;
 
