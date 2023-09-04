@@ -42,6 +42,10 @@ class MinuteTest {
 			minuteCDec.count();
 			System.out.println(minuteCDec.getCount());
 		}
+		
+		assertEquals(54,minuteCDec.getCount());
+
+		
 	}
 
 }

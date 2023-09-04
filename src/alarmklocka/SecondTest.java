@@ -41,6 +41,8 @@ class SecondTest {
 			secondCDec.count();
 			System.out.println(secondCDec.getCount());
 		}
+		
+		assertEquals(54,secondCDec.getCount());
 
 	}
 

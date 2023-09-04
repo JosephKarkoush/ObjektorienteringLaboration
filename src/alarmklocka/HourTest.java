@@ -43,7 +43,7 @@ class HourTest {
 			System.out.println(hourCDec.getCount());
 		}
 		
-		assertEquals(23,hourC.getCount());
+		assertEquals(23,hourCDec.getCount());
 	}
 
 }
