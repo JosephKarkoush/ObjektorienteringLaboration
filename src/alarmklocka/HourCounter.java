@@ -16,7 +16,7 @@ public class HourCounter extends CircularCounter {
 
 		public HourCounter(Direction direction, CounterType next)
 		 {
-		 super(24, direction, next); // vad anropas här?
+		 super(24, direction, next); // vad anropas här?//
 	
 
 }
