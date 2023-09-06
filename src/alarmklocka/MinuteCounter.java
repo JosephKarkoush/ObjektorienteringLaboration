@@ -14,6 +14,6 @@ public class MinuteCounter extends CircularCounter {
 	}
 
 	public MinuteCounter(Direction direction, CounterType next) {
-		super(60, direction, next); // vad anropas här?
+		super(60, direction, next); // vad anropas här?////
 	}
 }
